@@ -1,0 +1,102 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+.book {
+    background-color: rgba(143, 59, 36);
+    height: 80vh;
+    aspect-ratio: 2 / 3;
+    border-radius: 25px;
+    border: 10px #531505 solid;
+    outline: 5px black solid;
+
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.page {
+    background: radial-gradient(circle at top left, antiquewhite, bisque);
+    height: 77vh;
+    aspect-ratio: 2 / 3;
+    box-shadow: 0 0 8px black;
+
+
+    position: relative;
+    margin: auto;
+}
+
+.page::before{
+    content: "";
+    position: absolute;
+    left: 15px;
+    top: 10px;
+    bottom: 10px;
+    width: 4px;
+    background: repeating-linear-gradient(
+        to bottom,
+        red 0 10px,
+        transparent 10px 20px
+    );
+    border-radius: 2px;
+}
+
+.page::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 15px;
+  height: 100%;
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.15), transparent);
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  pointer-events: none;
+}
+
+#page-num {
+    position: absolute;
+    top: 3px;
+    right: 15px;
+    font: normal 20px "Palatino Limotype","Book Antiqua", Palatino, serif;
+}
+
+.page-button {
+    position: absolute;
+    bottom: 1px;
+    right: 10px;
+    background-color: transparent;
+}
+
+#next {
+    background-color: transparent;
+    border: transparent;
+}
+
+#next-image {
+    width: 50px;
+    height: 50px;
+}
+
+#previous {
+    background-color: transparent;
+    border: transparent;
+}
+
+#previous-image {
+    width: 50px;
+    height: 50px;
+    transform: scaleX(-1);
+}
+
+img {
+    background-color: transparent;
+}
+
+.main-title {
+    align-items: center;
+    text-align: center;
+}
